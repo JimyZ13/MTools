@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -J test           # job name
+#SBATCH -o test.o%j       # output and error file name (%j expands to jobID)
+#SBATCH --partition=debug
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=2
+#SBATCH --cpus-per-task=1
+#SBATCH --time=01:00:00
+#SBATCH --account=zhenglul_1035
+
+ulimit -s unlimited
+
+module load intel-oneapi/2021.3
+
+srun --mpi=pmi2 -n 2 /project/zhenglul_1035/software/qe-7.2/bin/pw.x < al.scf.in > out.num_holder
