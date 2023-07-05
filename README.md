@@ -1,8 +1,8 @@
 # MTools
 Computational Tools for Materials Calculation with DFT and QE
 
-####Folder Structure:
-#####- Plots: python scripts for plotting single functions, multiple functions, and band structures from string output
+##Folder Structure:
+###- Plots: python scripts for plotting single functions, multiple functions, and band structures from string output
   - /one.py given a string input, plot the data on a graph
   - /multiple.py given a string output with each set separated by \n, plot data independently
   - /bands.py given a string input, plot the band structure, can also plot verticle lines of high symmetry
